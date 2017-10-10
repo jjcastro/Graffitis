@@ -11,8 +11,6 @@ export default class Graffiti extends Component {
   }
 
   render() {
-    // console.log("owner: "+this.props.graffiti.owner)
-    // console.log("current user: "+this.props.currentUser._id)
     return (
       <li>
       <div className="panel panel-primary">
