@@ -74,10 +74,6 @@ class App extends Component {
          sources: ['local', 'url', 'camera'],
          max_file_size: '5000000',
          cropping: 'server'
-        //  max_image_width: '500',
-        //  max_image_height: '500',
-        //  min_image_width: '300',
-        //  min_image_height: '300',
        },
        (error, result) => {
          if (error) {
@@ -87,7 +83,6 @@ class App extends Component {
 
          const fileName = result[0].original_filename;
          const url = result[0].url;
-         //console.log(fileName,url);
          this.changeFileURL(fileName,url);
       });
    }
@@ -119,6 +114,8 @@ class App extends Component {
      });
    }
 
+  
+  // Render es complejo y difícil de entender, sería mejor separarlo en componentes pars hacerlo más fácil de modificar
   render() {
     return (
     <div className="App">
